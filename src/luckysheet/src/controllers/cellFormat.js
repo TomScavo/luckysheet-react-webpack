@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import Store from '../store';
 import { replaceHtml,transformRangeToAbsolute,openSelfModel } from '../utils/util';
 import { modelHTML } from './constant';

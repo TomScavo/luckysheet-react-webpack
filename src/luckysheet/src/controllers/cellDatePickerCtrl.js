@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import menuButton from './menuButton';
 import formula from '../global/formula';
 import Store from '../store';

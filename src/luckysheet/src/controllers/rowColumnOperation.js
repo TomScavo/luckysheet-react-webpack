@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 import pivotTable from './pivotTable';
 import luckysheetPostil from './postil';
 import imageCtrl from './imageCtrl';
