@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { replaceHtml } from '../utils/util';
 import { modelHTML } from './constant';
 import { selectHightlightShow } from './select';

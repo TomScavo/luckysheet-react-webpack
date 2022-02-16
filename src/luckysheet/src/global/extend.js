@@ -1,3 +1,4 @@
+/* eslint-disable react-func/max-lines-per-function */
 import $ from 'jquery';
 
 import editor from './editor';
@@ -5,6 +6,7 @@ import formula from './formula';
 import { jfrefreshgrid_adRC, jfrefreshgrid_deleteCell, jfrefreshgrid_rhcw } from './refresh';
 import { datagridgrowth, getcellFormula } from './getdata';
 import { setcellvalue } from './setdata';
+import * as api from './api';
 import conditionformat from '../controllers/conditionformat';
 import luckysheetFreezen from '../controllers/freezen';
 import { selectHightlightShow } from '../controllers/select';
@@ -1737,13 +1739,13 @@ function luckysheetdeletetable(type, st, ed, sheetIndex) {
         d.splice(st, slen);
 
         //删除多少行，增加多少行空白行                
-        for (let r = 0; r < slen; r++) {
-            let row = [];
-            for (let c = 0; c < d[0].length; c++) {
-                row.push(null);
-            }
-            d.push(row);
-        }
+        // for (let r = 0; r < slen; r++) {
+        //     let row = [];
+        //     for (let c = 0; c < d[0].length; c++) {
+        //         row.push(null);
+        //     }
+        //     d.push(row);
+        // }
     }
     else {
         type1 = "c";
@@ -1849,11 +1851,11 @@ function luckysheetdeletetable(type, st, ed, sheetIndex) {
 
         for (let r = 0; r < d.length; r++) {
             let row = [].concat(d[r]);
-            
+            debugger
             //删除选中列
             row.splice(st, slen);
             
-            d[r] = row.concat(addcol);
+            d[r] = row;
         }
     }
 
@@ -1884,6 +1886,8 @@ function luckysheetdeletetable(type, st, ed, sheetIndex) {
         file.dataVerification = newDataVerification;
         file.hyperlink = newHyperlink;
     }
+
+    api.setRangeShow({row:[0,0],column:[0,0]});
 }
 
 //删除单元格

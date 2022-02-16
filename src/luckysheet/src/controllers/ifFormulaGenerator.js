@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import formula from '../global/formula';
 import editor from '../global/editor';
 import {luckysheetupdateCell} from './updateCell';

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import {getFontStyleByCell, textTrim} from "../global/getdata";
 import {selectTextContent,selectTextContentCross,selectTextContentCollapse} from '../global/cursorPos';
 import locale from '../locale/locale';

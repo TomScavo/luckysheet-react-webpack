@@ -1,3 +1,4 @@
+import $ from 'jquery';
 export function showloading(txt) {
     $("#luckysheet-cell-loading").find("span").text(txt).end().show();
 };

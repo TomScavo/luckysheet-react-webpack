@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import Store from '../store';
 import locale from '../locale/locale';
 import { modelHTML } from './constant';
