@@ -1,0 +1,68 @@
+{
+  "extends": "react-app",
+  "rules": {
+    // 不检查 effect 的依赖
+    // "react-hooks/exhaustive-deps": 0,
+    // 不检查 a 链接的 href 值
+    "jsx-a11y/anchor-is-valid": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.{js,jsx,ts,tsx}"],
+      "rules": {
+        // 禁用var
+        "no-var": "warn",
+        // 标记console和debugger
+        "no-console": "warn",
+        "no-debugger": "warn",
+        // 单文件最大行数，不包含空白行及纯注释行
+        // "max-lines": ["error", 400],
+        // function内最大缩进数
+        // "max-depth": ["error", 2],
+        // 检测map元素是否有加key
+        "react/jsx-key": "warn",
+        // 最大条件组合数
+        "react-func/max-combined-conditions": ["warn", 1],
+        // function最大行数，不包括空白行及注释行
+        "react-func/max-lines-per-function": [
+          "warn",
+          {
+            "max": 20,
+            "skipBlankLines": true,
+            "skipComments": true,
+            "IIFEs": true
+          }
+        ],
+        // 去掉未使用的import
+        "unused-imports/no-unused-imports": "warn",
+        // import引入规则
+        "import/newline-after-import": "warn",
+        "import/no-duplicates": "warn",
+        "import/order": [
+          "warn",
+          {
+            "groups": ["builtin", "external", "internal", "parent", ["sibling", "index"], "unknown"],
+            "pathGroupsExcludedImportTypes": [],
+            "pathGroups": [
+              {
+                "pattern": "react",
+                "group": "external",
+                "position": "before"
+              },
+              {
+                "pattern": "@/**",
+                "group": "internal"
+              },
+              {
+                "pattern": "./*.less",
+                "group": "unknown",
+                "position": "after"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "plugins": ["react-func", "import", "react", "unused-imports"]
+}

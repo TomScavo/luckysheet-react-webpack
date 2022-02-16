@@ -1,0 +1,6 @@
+# mock 的配置
+Mock_Server_Port: 36742
+Mock_Base_Path: '/mock/5e983df074e79e1c2318f3c2'
+Mock_Context: ['/template/api']
+Mock_Target: 'http://qa-tool.fuxi.netease.com:9000'
+Real_Backend_Api_Host: 'http://eevee-template.apps.danlu.netease.com/'
